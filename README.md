@@ -1,11 +1,3 @@
-# TMP_Assessment
-Data Analytics Pathway Assessment
-
-Project: Client Subscription Prediction Model
-
-
-
-
 # Term Deposit Subscription Prediction  
 
 ## Overview  
