@@ -98,7 +98,9 @@ The model demonstrated excellent performance, with no misclassifications on the 
 
 ### 6. Deployment  
 
-The model's predictions can be integrated into a decision-support tool for the marketing team. For example, a dashboard can provide insights on potential clients and help optimize resource allocation for campaigns.  
+The model has been successfully deployed using Streamlit, providing an interactive and user-friendly decision-support tool for the marketing team. This tool allows the team to upload client data, make predictions on subscription likelihood, and visualize key insights directly. By leveraging this app, the marketing team can optimize resource allocation and tailor campaigns effectively.
+
+You can access the deployed application at: https://victor-osei-tmp-assessment-app-q1vels.streamlit.app/ 
 
 **Prediction Output:**  
 Predictions have been converted to readable labels ("yes" or "no") for ease of understanding and implementation.  

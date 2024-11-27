@@ -124,7 +124,6 @@ def create_dashboard(df):
     # 1. Subscription Rate by Job
     st.header('1. Subscription Rate by Job')
     job_subscription = df.groupby('job')['y'].apply(lambda x: (x == 'yes').mean() * 100).sort_values(ascending=False)
-    
     plt.figure(figsize=(10, 6))
     job_subscription.plot(kind='bar')
     plt.title('Subscription Rate by Job Category')
@@ -133,7 +132,7 @@ def create_dashboard(df):
     plt.xticks(rotation=45, ha='right')
     plt.tight_layout()
     st.pyplot(plt)
-    plt.clf()  # Clear the figure to avoid overlapping in multiple plots
+    plt.clf() 
     
     # 2. Age Distribution
     st.header('2. Age Distribution by Subscription Status')
