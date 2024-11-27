@@ -8,17 +8,48 @@ This project focuses on building a predictive model to determine the likelihood 
 
 ## CRISP-DM Process  
 
-### 1. Business Understanding  
+## 1. Business Understanding  
 
 The objective of this project is to assist the marketing team in identifying clients likely to subscribe to a term deposit, allowing for targeted marketing campaigns that maximize efficiency and return on investment.  
 
 
-### 2. Data Understanding  
+## 2. Data Understanding  
 
 The dataset contains demographic, socio-economic, and historical interaction details of clients with the bank. Key features include:  
 - **Client attributes:** age, job, marital status, education, etc.  
 - **Campaign attributes:** number of contacts, previous outcomes, and communication types.  
 - **Economic context:** indicators like employment variation rate, consumer price index, and interest rate.  
+
+Attribute information:
+
+   Input variables:
+   # bank client data:
+   
+   *  age (numeric)
+   *  job : type of job (categorical: "admin.","unknown","unemployed","management","housemaid","entrepreneur","student",
+                                       "blue-collar","self-employed","retired","technician","services") 
+   *  marital : marital status (categorical: "married","divorced","single"; note: "divorced" means divorced or widowed)
+   *  education (categorical: "unknown","secondary","primary","tertiary")
+   *  default: has credit in default? (binary: "yes","no")
+   *  balance: average yearly balance, in euros (numeric) 
+   *  housing: has housing loan? (binary: "yes","no")
+   *  loan: has personal loan? (binary: "yes","no")
+
+   # related with the last contact of the current campaign:
+   *  contact: contact communication type (categorical: "unknown","telephone","cellular") 
+   *  day: last contact day of the month (numeric)
+   *  month: last contact month of year (categorical: "jan", "feb", "mar", ..., "nov", "dec")
+   *  duration: last contact duration, in seconds (numeric)
+
+   # other attributes:
+  *  campaign: number of contacts performed during this campaign and for this client (numeric, includes last contact)
+  *  pdays: number of days that passed by after the client was last contacted from a previous campaign (numeric, -1 means client was not previously contacted)
+  *  previous: number of contacts performed before this campaign and for this client (numeric)
+  *  poutcome: outcome of the previous marketing campaign (categorical: "unknown","other","failure","success")
+
+  # Output variable (desired target):
+  * y - has the client subscribed a term deposit? (binary: "yes","no")
+
 
 ### Key Observations from Exploratory Data Analysis (EDA):  
 1. **Subscription Trends:** Most clients did not subscribe ("no").  
